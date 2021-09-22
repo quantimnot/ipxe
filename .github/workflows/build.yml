@@ -32,7 +32,10 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: ipxe-x86
-          path: bin/
+          path: |
+            src/bin/ipxe.efi
+            src/bin/ipxe.iso
+            src/bin/ipxe.usb
 
   arm32:
     name: ARM32
@@ -56,7 +59,9 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: ipxe-arm32-efi
-          path: bin-arm32-efi/
+          path: |
+            src/bin-arm64-efi/ipxe.efi
+            src/bin-arm64-efi/ipxe.usb
 
   arm64:
     name: ARM64
@@ -80,4 +85,6 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: ipxe-arm64-efi
-          path: bin-arm64-efi/
+          path: |
+            src/bin-arm64-efi/ipxe.efi
+            src/bin-arm64-efi/ipxe.usb
