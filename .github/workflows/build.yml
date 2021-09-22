@@ -56,7 +56,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: ipxe-arm32-efi
-          path: bin/
+          path: bin-arm32-efi/
 
   arm64:
     name: ARM64
@@ -80,4 +80,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: ipxe-arm64-efi
-          path: bin/
+          path: bin-arm64-efi/
